@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Training Grooming & Kebersihan Diri - Tim Kitchen</title>
+<style>
+:root{--bg:#f6f8f5;--card:#fff;--ink:#16211d;--mut:#5b6b65;--pri:#0f5c4d;--onpri:#fff;--ok:#1d7a46;--okbg:#e3f4ea;--bad:#b3261e;--badbg:#fbe7e5;--warn:#fff3d6;--line:#d9e1dc;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101815;--card:#18231f;--ink:#eaf1ee;--mut:#9db0a8;--pri:#4fc3a6;--onpri:#06201a;--ok:#6fdc9b;--okbg:#17372a;--bad:#ff8a80;--badbg:#3d1c1a;--warn:#3a3015;--line:#2b3b35}}
+:root[data-theme="dark"]{--bg:#101815;--card:#18231f;--ink:#eaf1ee;--mut:#9db0a8;--pri:#4fc3a6;--onpri:#06201a;--ok:#6fdc9b;--okbg:#17372a;--bad:#ff8a80;--badbg:#3d1c1a;--warn:#3a3015;--line:#2b3b35}
+html{color-scheme:light dark;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:18px 16px 40px}
+.brand{font-size:13px;color:var(--mut);margin-bottom:10px}
+h1{font-size:26px;line-height:1.2;margin:0 0 8px}
+h2{font-size:22px;line-height:1.25;margin:0 0 12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.bar{height:8px;background:var(--line);border-radius:8px;overflow:hidden;margin:6px 0 14px}
+.bar i{display:block;height:100%;background:var(--pri);transition:width .25s}
+.meta{font-size:14px;color:var(--mut)}
+ul,ol{padding-left:22px;margin:8px 0}li{margin:6px 0}
+.no{background:var(--badbg);border-radius:10px;padding:10px 14px;margin-top:12px}
+.tip{background:var(--warn);border-radius:10px;padding:10px 14px;margin-top:12px}
+table{width:100%;border-collapse:collapse;font-size:15px}td,th{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+.tw{overflow-x:auto}
+button{font:inherit;font-weight:600;border:0;border-radius:12px;padding:14px 18px;min-height:48px;cursor:pointer;background:var(--pri);color:var(--onpri)}
+button.sec{background:transparent;color:var(--pri);border:2px solid var(--pri)}
+button:disabled{opacity:.4;cursor:default}
+button:focus-visible,input:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+.row{display:flex;gap:10px;margin-top:16px}.row button{flex:1}
+input{font:inherit;width:100%;padding:14px;border-radius:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);margin:10px 0}
+.opt{display:block;width:100%;text-align:left;background:var(--bg);color:var(--ink);border:2px solid var(--line);margin-top:10px;font-weight:500}
+.opt.ok{background:var(--okbg);border-color:var(--ok)}.opt.bad{background:var(--badbg);border-color:var(--bad)}
+.fb{margin-top:12px;font-weight:600}
+.res{text-align:center}.score{font-size:56px;font-weight:800;line-height:1}
+.pill{display:inline-block;padding:8px 20px;border-radius:99px;font-weight:800;margin:12px 0}
+.pill.l{background:var(--okbg);color:var(--ok)}.pill.u{background:var(--badbg);color:var(--bad)}
+.rec{text-align:left;border:2px dashed var(--line);border-radius:12px;padding:12px 14px;margin:14px 0;font-size:15px}
+.rec b{display:inline-block;min-width:92px}
+</style></head><body><main>
+<div class="brand">CV. Personal Space &middot; SOP/KTC/001</div>
+<div id="app"></div>
+</main>
+<script>
+const SL=[
+{t:"Tujuan & kapan dikerjakan",h:`<p>Staf kitchen harus tampil <b>rapi dan stylish</b>, aman saat bekerja, dan menjaga makanan tetap <b>higienis dan aman</b> untuk customer.</p><div class="tip"><b>Kapan?</b> Setiap hari, <b>sebelum absen masuk</b> dan sebelum mulai bekerja di area dapur.</div><p class="meta">Berlaku untuk seluruh staf kitchen Shift 1 dan Shift 2, semua outlet.</p>`},
+{t:"Pakaian: bebas, tapi safety dulu",h:`<p>Boleh pakai baju apa saja, asal memenuhi syarat safety dan tetap rapi.</p><ul><li>Baju & celana bersih, tidak berbau, <b>diganti setiap hari</b></li><li><b>Celana panjang</b>. Tidak boleh celana/rok pendek di dapur</li><li>Ukuran pas: tidak terlalu longgar (lengan bisa kena api) dan tidak terlalu ketat</li><li>Bahan menyerap keringat & tidak mudah meleleh, misal <b>katun atau linen</b>. Hindari sintetis tipis dekat kompor dan fryer</li><li>Tanpa tali, rantai, atau aksesoris menjuntai</li><li>Topi / bucket hat boleh, asal bersih dan rambut tetap tertata</li></ul><div class="no"><b>Tidak boleh:</b> baju robek, bolong, atau sangat lusuh; sablon/tulisan tidak pantas atau menyinggung.</div>`},
+{t:"Standar grooming (1)",h:`<div class="tw"><table><tr><th>Bagian</th><th>Standar</th><th>Tidak boleh</th></tr><tr><td>Apron</td><td>Bersih, wajib dipakai di dapur. Lepas sebelum ke toilet</td><td>Dipakai ke toilet / area luar</td></tr><tr><td>Rambut</td><td>Rapi, diikat, tertutup topi/hairnet</td><td>Menjuntai atau jatuh ke area masak</td></tr><tr><td>Wajah</td><td>Jenggot & kumis rapi atau dicukur. Make up tipis</td><td>Jenggot/kumis tebal tidak higienis</td></tr><tr><td>Tangan & kuku</td><td>Kuku pendek, bersih, tanpa cat kuku</td><td>Kuku panjang, cat kuku, kuku palsu</td></tr></table></div>`},
+{t:"Standar grooming (2)",h:`<div class="tw"><table><tr><th>Bagian</th><th>Standar</th><th>Tidak boleh</th></tr><tr><td>Perhiasan</td><td>Lepas sebelum masuk dapur. Boleh: <b>1 cincin, anting stud, jam tangan</b></td><td>Banyak cincin, gelang, anting panjang, kalung</td></tr><tr><td>Sepatu</td><td>Tertutup, bersih, anti licin</td><td>Sandal / sepatu licin</td></tr><tr><td>Wangi badan</td><td>Mandi, nafas terjaga, parfum sewajarnya</td><td>Parfum menyengat, bau badan</td></tr></table></div>`},
+{t:"Kapan wajib cuci tangan",h:`<ul><li>Sebelum mulai bekerja dan sebelum memegang makanan</li><li>Setelah dari toilet</li><li>Setelah memegang sampah, uang, atau <b>ponsel</b></li><li>Setelah membersihkan outlet atau toilet</li><li>Setelah memegang <b>bahan mentah</b> (daging, ayam, telur), sebelum menyentuh bahan matang</li><li>Setelah batuk, bersin, atau menyentuh wajah dan rambut</li></ul>`},
+{t:"Langkah cuci tangan",h:`<ol><li>Basahi tangan dengan air bersih</li><li>Pakai sabun, gosok telapak, punggung tangan, sela jari, dan kuku</li><li>Gosok <b>minimal 20 detik</b></li><li>Bilas sampai bersih</li><li>Keringkan dengan tisu atau lap bersih</li></ol>`},
+{t:"Kalau sakit atau terluka",h:`<ul><li><b>Luka di tangan:</b> tutup dengan plester tahan air, lalu pakai sarung tangan</li><li><b>Batuk, pilek, demam:</b> pakai masker dan lapor ke leader. Leader yang menentukan boleh atau tidak menangani makanan</li><li><b>Diare atau muntah:</b> tidak boleh menangani makanan. Segera lapor ke kepala shift</li></ul>`},
+{t:"Aturan di area dapur",h:`<ul><li>Tidak makan, minum, atau merokok di area kerja</li><li>Ponsel disimpan di <b>loker</b>, tidak dibawa ke meja kerja</li><li>Tidak mencicipi makanan dengan sendok yang sama berulang kali</li></ul><div class="tip">SPV Kitchen / SPV outlet akan memeriksa grooming secara berkala. Hasilnya jadi bahan evaluasi performa.</div>`}
+];
+const Q=[
+{q:"Mana pakaian yang boleh dipakai di area dapur?",o:["Celana panjang katun yang pas di badan","Celana pendek yang nyaman","Rok pendek","Celana panjang sangat longgar"],a:0},
+{q:"Bahan baju yang paling aman dekat kompor dan fryer?",o:["Sintetis tipis","Katun atau linen","Bahan apa saja, asal bagus","Bahan licin mengkilap"],a:1},
+{q:"Kapan apron harus dilepas?",o:["Saat istirahat makan saja","Tidak perlu dilepas","Sebelum ke toilet","Saat pulang saja"],a:2},
+{q:"Standar rambut di dapur?",o:["Dibiarkan terurai asal bersih","Diikat dan tertutup topi/hairnet","Cukup disisir rapi","Boleh jatuh ke bahu"],a:1},
+{q:"Standar kuku staf kitchen?",o:["Pendek, bersih, tanpa cat kuku","Panjang asal bersih","Boleh cat kuku warna netral","Boleh kuku palsu"],a:0},
+{q:"Perhiasan yang boleh dipakai saat di dapur?",o:["Kalung kecil dan gelang","Banyak cincin","1 cincin, anting stud, dan jam tangan","Anting panjang"],a:2},
+{q:"Kapan wajib cuci tangan?",o:["Hanya jika tangan terlihat kotor","Hanya di akhir shift","Hanya setelah makan","Setelah memegang ponsel, uang, atau sampah"],a:3},
+{q:"Berapa lama minimal menggosok tangan dengan sabun?",o:["5 detik","10 detik","20 detik","60 detik"],a:2},
+{q:"Tanganmu terluka. Apa yang harus dilakukan?",o:["Tutup plester tahan air, lalu pakai sarung tangan","Tetap bekerja tanpa penutup","Cukup dicuci dengan air","Tutup pakai tisu"],a:0},
+{q:"Kamu diare atau muntah. Apa yang benar?",o:["Pakai masker lalu lanjut bekerja","Tetap masak asal cuci tangan","Tidak boleh menangani makanan, lapor ke kepala shift","Tukar tugas diam-diam dengan teman"],a:2}
+];
+const PASS=90, SHEET_URL="https://docs.google.com/spreadsheets/d/1unNiFA5DvUoxYMGESriMl5wuT40Faunn3817DAEgfwQ/edit?usp=sharing", FORM_URL=""; // isi FORM_URL bila sudah ada Google Form
+const app=document.getElementById("app");
+let S={step:"name",name:"",i:0,qs:[],qi:0,right:0,ans:null};
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function bar(p){return `<div class="bar"><i style="width:${p}%"></i></div>`}
+function render(){
+ if(S.step==="name"){
+  app.innerHTML=`<div class="card"><h1>Grooming & Kebersihan Diri</h1><p class="meta">Training Tim Kitchen &middot; ${SL.length} materi &middot; ${Q.length} soal &middot; lulus ${PASS}%</p><label for="n"><b>Nama lengkap</b></label><input id="n" autocomplete="name" placeholder="Ketik namamu" value="${esc(S.name)}"><button id="go">Mulai belajar</button></div>`;
+  const n=document.getElementById("n"),g=document.getElementById("go");
+  const start=()=>{const v=n.value.trim();if(v.length<2){n.focus();return}S.name=v;S.step="learn";S.i=0;render()};
+  g.onclick=start;n.onkeydown=e=>{if(e.key==="Enter")start()};
+ }else if(S.step==="learn"){
+  const s=SL[S.i],last=S.i===SL.length-1;
+  app.innerHTML=`<div class="meta">Materi ${S.i+1} dari ${SL.length}</div>${bar((S.i+1)/SL.length*100)}<div class="card"><h2>${s.t}</h2>${s.h}</div><div class="row"><button class="sec" id="b" ${S.i?"":"disabled"}>Kembali</button><button id="nx">${last?"Mulai kuis":"Lanjut"}</button></div>`;
+  document.getElementById("b").onclick=()=>{S.i--;render();scrollTo(0,0)};
+  document.getElementById("nx").onclick=()=>{if(last){S.step="quiz";S.qs=shuf(Q).map(q=>{const c=q.o[q.a];const o=shuf(q.o);return{q:q.q,o,a:o.indexOf(c)}});S.qi=0;S.right=0;S.ans=null}else S.i++;render();scrollTo(0,0)};
+ }else if(S.step==="quiz"){
+  const q=S.qs[S.qi],done=S.ans!==null;
+  app.innerHTML=`<div class="meta">Soal ${S.qi+1} dari ${Q.length}</div>${bar(S.qi/Q.length*100)}<div class="card"><h2>${q.q}</h2>${q.o.map((o,k)=>`<button class="opt ${done?(k===q.a?"ok":(k===S.ans?"bad":"")):""}" data-k="${k}" ${done?"disabled":""}>${o}</button>`).join("")}${done?`<div class="fb" style="color:var(${S.ans===q.a?"--ok":"--bad"})">${S.ans===q.a?"Benar!":"Kurang tepat. Jawaban benar: "+q.o[q.a]}</div>`:""}</div>${done?`<div class="row"><button id="nx">${S.qi===Q.length-1?"Lihat hasil":"Soal berikutnya"}</button></div>`:""}`;
+  document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{S.ans=+b.dataset.k;if(S.ans===q.a)S.right++;render()});
+  const nx=document.getElementById("nx");if(nx)nx.onclick=()=>{S.ans=null;if(S.qi===Q.length-1)S.step="result";else S.qi++;render();scrollTo(0,0)};
+ }else{
+  const pct=Math.round(S.right/Q.length*100),pass=pct>=PASS,d=new Date();
+  const tgl=d.toLocaleDateString("id-ID",{day:"2-digit",month:"long",year:"numeric"})+", "+d.toLocaleTimeString("id-ID",{hour:"2-digit",minute:"2-digit"}).replace(".",":");
+  let h=0;for(const c of S.name+pct+d.getTime())h=(h*31+c.charCodeAt(0))>>>0;const code=h.toString(36).toUpperCase().padStart(6,"0").slice(-6);
+  const st=pass?"LULUS":"ULANG",row=`${S.name}\t${pct}%\t${st}`;
+  app.innerHTML=`<div class="card res"><div class="meta">Hasil kuis</div><div class="score">${pct}%</div><div class="meta">${S.right} dari ${Q.length} benar</div><div class="pill ${pass?"l":"u"}">${st}</div>${pass?`<p>Training selesai 100%. Screenshot halaman ini dan kirim ke HR.</p>`:`<p>Nilai minimal ${PASS}%. Baca materi lagi, lalu ulangi kuis.</p>`}<div class="rec"><div><b>Nama</b>${esc(S.name)}</div><div><b>Skor</b>${pct}%</div><div><b>Status</b>${st}</div><div><b>Waktu</b>${tgl}</div><div><b>Kode</b>${code}</div></div>${pass?`<button id="cp" class="sec" style="width:100%">Salin Nama, Skor, Status</button><div id="cpm" class="meta" style="margin-top:8px"></div>${SHEET_URL?`<div class="tip" style="text-align:left;font-size:15px"><b>Catat hasilmu:</b><ol><li>Tekan <b>Salin</b> di atas</li><li>Buka Sheet Status Training</li><li>Klik kolom <b>Nama</b> di baris kosong paling atas, lalu <b>tempel (paste)</b></li></ol></div><a href="${SHEET_URL}" target="_blank" rel="noopener"><button style="width:100%;margin-top:10px">Buka Sheet Status Training</button></a>`:""}${FORM_URL?`<a href="${FORM_URL}" target="_blank" rel="noopener"><button style="width:100%;margin-top:10px">Kirim hasil ke HR</button></a>`:""}`:`<button id="re" style="width:100%">Ulangi kuis</button><button id="rd" class="sec" style="width:100%;margin-top:10px">Baca materi lagi</button>`}</div>`;
+  const cp=document.getElementById("cp");
+  if(cp)cp.onclick=async()=>{const m=document.getElementById("cpm");try{await navigator.clipboard.writeText(row);m.textContent="Tersalin."}catch(e){m.textContent="Salin manual: "+row.replace(/\t/g," | ")}};
+  const re=document.getElementById("re");if(re)re.onclick=()=>{S.step="quiz";S.qs=shuf(Q).map(q=>{const c=q.o[q.a];const o=shuf(q.o);return{q:q.q,o,a:o.indexOf(c)}});S.qi=0;S.right=0;S.ans=null;render();scrollTo(0,0)};
+  const rd=document.getElementById("rd");if(rd)rd.onclick=()=>{S.step="learn";S.i=0;render();scrollTo(0,0)};
+ }
+}
+render();
+</script></body></html>
